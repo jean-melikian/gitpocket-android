@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Git Pocket</string>
+    <string name="retry">Retry</string>
+    <string name="fetching_user_error">An error occurred while loading the user\'s profile</string>
+    <string name="fetching_repos_error">An error occurred while loading the user\'s repositories</string>
+    <string name="user_nickname">Nickname</string>
 </resources>
