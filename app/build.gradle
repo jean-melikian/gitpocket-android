@@ -57,6 +57,9 @@ dependencies {
     // OkHttp3
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3_version"
 
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
     // Dagger 2
     implementation "com.google.dagger:dagger:$dagger2_version"
     kapt "com.google.dagger:dagger-compiler:$dagger2_version"

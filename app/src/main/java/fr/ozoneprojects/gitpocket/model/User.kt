@@ -4,38 +4,66 @@ import com.squareup.moshi.Json
 import java.io.Serializable
 
 data class User(
-    @Json(name = "login")
+    @field:Json(name = "login")
     var login: String,
-    @Json(name = "id")
+    @field:Json(name = "id")
     var id: Int,
-    @Json(name = "avatar_url")
+    @field:Json(name = "node_id")
+    var nodeId: String,
+    @field:Json(name = "avatar_url")
     var avatarUrl: String,
-    @Json(name = "url")
+    @field:Json(name = "gravatar_id")
+    var gravatarId: String,
+    @field:Json(name = "url")
     var url: String,
-    @Json(name = "html_url")
+    @field:Json(name = "html_url")
     var htmlUrl: String,
-    @Json(name = "repos_url")
+    @field:Json(name = "followers_url")
+    var followersUrl: String,
+    @field:Json(name = "following_url")
+    var followingUrl: String,
+    @field:Json(name = "gists_url")
+    var gistsUrl: String,
+    @field:Json(name = "starred_url")
+    var starredUrl: String,
+    @field:Json(name = "subscriptions_url")
+    var subscriptionsUrl: String,
+    @field:Json(name = "organizations_url")
+    var organizationsUrl: String,
+    @field:Json(name = "repos_url")
     var reposUrl: String,
-    @Json(name = "name")
+    @field:Json(name = "events_url")
+    var eventsUrl: String,
+    @field:Json(name = "received_events_url")
+    var receivedEventsUrl: String,
+    @field:Json(name = "type")
+    var type: String,
+    @field:Json(name = "site_admin")
+    var siteAdmin: Boolean,
+    @field:Json(name = "name")
     var name: String,
-    @Json(name = "company")
+    @field:Json(name = "company")
     var company: Any?,
-    @Json(name = "location")
+    @field:Json(name = "blog")
+    var blog: String,
+    @field:Json(name = "location")
     var location: String,
-    @Json(name = "email")
+    @field:Json(name = "email")
     var email: String?,
-    @Json(name = "bio")
+    @field:Json(name = "hireable")
+    var hireable: Any?,
+    @field:Json(name = "bio")
     var bio: String,
-    @Json(name = "public_repos")
+    @field:Json(name = "public_repos")
     var publicRepos: Int,
-    @Json(name = "public_gists")
+    @field:Json(name = "public_gists")
     var publicGists: Int,
-    @Json(name = "followers")
+    @field:Json(name = "followers")
     var followers: Int,
-    @Json(name = "following")
+    @field:Json(name = "following")
     var following: Int,
-    @Json(name = "created_at")
+    @field:Json(name = "created_at")
     var createdAt: String,
-    @Json(name = "updated_at")
+    @field:Json(name = "updated_at")
     var updatedAt: String
 ) : Serializable

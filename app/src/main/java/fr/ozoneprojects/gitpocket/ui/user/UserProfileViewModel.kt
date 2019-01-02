@@ -70,6 +70,10 @@ class UserProfileViewModel : BaseViewModel() {
         return userLogin
     }
 
+    fun getUserPicture(): MutableLiveData<String> {
+        return userPicture
+    }
+
     private fun onRetrieveUserStart() {
         loadingVisibility.value = View.VISIBLE
         errorMessage.value = null
@@ -88,7 +92,7 @@ class UserProfileViewModel : BaseViewModel() {
 
     private fun bind(value: User?) {
         userLogin.value = value?.login
-        userPicture.value = value?.login
+        userPicture.value = value?.avatarUrl
     }
 
     private fun onRetrieveUserError(t: Throwable) {

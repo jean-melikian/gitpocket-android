@@ -4,8 +4,8 @@ import com.squareup.moshi.Json
 import java.io.Serializable
 
 data class Repository(
-    @Json(name = "name")
+    @field:Json(name = "name")
     val name: String = "Repository name",
-    @Json(name = "language")
+    @field:Json(name = "language")
     val language: String
 ) : Serializable
