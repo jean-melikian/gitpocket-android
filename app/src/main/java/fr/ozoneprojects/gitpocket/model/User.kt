@@ -1,40 +1,41 @@
 package fr.ozoneprojects.gitpocket.model
 
-import com.google.gson.annotations.SerializedName
+import com.squareup.moshi.Json
+import java.io.Serializable
 
-data class UserJson(
-    @SerializedName("login")
+data class User(
+    @Json(name = "login")
     var login: String,
-    @SerializedName("id")
+    @Json(name = "id")
     var id: Int,
-    @SerializedName("avatar_url")
+    @Json(name = "avatar_url")
     var avatarUrl: String,
-    @SerializedName("url")
+    @Json(name = "url")
     var url: String,
-    @SerializedName("html_url")
+    @Json(name = "html_url")
     var htmlUrl: String,
-    @SerializedName("repos_url")
+    @Json(name = "repos_url")
     var reposUrl: String,
-    @SerializedName("name")
+    @Json(name = "name")
     var name: String,
-    @SerializedName("company")
+    @Json(name = "company")
     var company: Any?,
-    @SerializedName("location")
+    @Json(name = "location")
     var location: String,
-    @SerializedName("email")
+    @Json(name = "email")
     var email: String?,
-    @SerializedName("bio")
+    @Json(name = "bio")
     var bio: String,
-    @SerializedName("public_repos")
+    @Json(name = "public_repos")
     var publicRepos: Int,
-    @SerializedName("public_gists")
+    @Json(name = "public_gists")
     var publicGists: Int,
-    @SerializedName("followers")
+    @Json(name = "followers")
     var followers: Int,
-    @SerializedName("following")
+    @Json(name = "following")
     var following: Int,
-    @SerializedName("created_at")
+    @Json(name = "created_at")
     var createdAt: String,
-    @SerializedName("updated_at")
+    @Json(name = "updated_at")
     var updatedAt: String
-)
+) : Serializable
